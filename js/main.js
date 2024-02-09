@@ -26,3 +26,4 @@ window.addEventListener("scroll", () => {
 		nav.classList.remove("nav__bgc");
 	}
 });
+

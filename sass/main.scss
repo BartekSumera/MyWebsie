@@ -18,7 +18,7 @@ body {
 
 .container {
 	max-width: 95%;
-	width: 100%;
+	width: 100% ;
 	margin: 0 auto;
 	padding: 0 0.5em;
 }
@@ -28,10 +28,8 @@ body {
 	width: 100%;
 	z-index: 999;
 	transition: bacground-color 0.4s ease;
-
-	&__bgc {
-		background-color: $black;
-	}
+	background-color: $black;
+	
 
 	&__body {
 		display: flex;
@@ -43,7 +41,7 @@ body {
 
 	&__button {
 		padding: 0.5em;
-		color: $white;
+		color: $forestgreen;
 		font-size: 2.4rem;
 		cursor: pointer;
 		z-index: 9999;
@@ -78,6 +76,49 @@ body {
 	}
 }
 
+.header {
+	height: 100vh;
+	width: 100%;
+	background-color: $black;
+	background-image:url(/img/programmer.jpg)rgba(16, 16, 16, 0.8); 
+	background-blend-mode: darken;
+	background-size: cover;
+	background-position: 0 -100px;	
+	background-position: top;
+	background-repeat: no-repeat;
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 0.3em;
+		height: 100%;
+		color: $white;
+	}
+
+	&__text,
+	&__content {
+		font-size: 2.4rem;
+	}
+
+	&__heading {
+		font-size: 4.4rem;
+	}
+
+	&__write {
+		color: $forestgreen;
+		font-weight: 600;
+		font-size: 2.2rem;
+	}
+}
+
+@media (min-width: 500px) {
+	.nav {
+		&__links {
+			height: 60vh;
+		}
+	}
+}
 
 
 
@@ -85,7 +126,7 @@ body {
 	.container {
 		max-width: 1200px;
 		padding: 0 1em;
-		background-color: $black;
+		
 		
 	}
 
@@ -98,7 +139,7 @@ body {
 		&__logo {
 			display: block;
 			font-size: 4rem;
-			color: $white;
+			color: $forestgreen;
 			font-family: "Arizonia", cursive;
 		}
 
@@ -116,7 +157,7 @@ body {
 			height: unset;
 			padding: 1em 0;
 			opacity: 1;
-			font-weight: 700;
+			font-weight: 500;
 			transform: translateY(0);
 			background-color: unset;
 		}
@@ -146,4 +187,60 @@ body {
 		}
 		
     }
+	.header {
+		background: url("/img/programmer.jpg") rgba(16, 16, 16, 0.8);
+		background-blend-mode: darken;
+		background-size: 100% auto;
+		background-position: 0 -300px;
+		background-repeat: no-repeat;
+
+
+		&__body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 0.3em;
+			color: $white;
+		}
+
+		&__text,
+		&__content {
+			font-size: 3rem;
+		}
+
+		&__heading {
+			font-size: 5rem;
+		}
+
+		&__write {
+			color: $forestgreen;
+			font-weight: 400;
+			font-size: 3rem;
+		}
+	}
 }
+
+@media (min-width: 1024px) {
+	html {
+		scroll-padding-top: unset;
+	}
+}
+
+@media (min-width: 1200px) {
+	
+	.header {
+		&__text,
+		&__content {
+			font-size: 4rem;
+		}
+
+		&__heading {
+			font-size: 6rem;
+		}
+
+		&__write {
+			font-size: 4rem;
+		}
+	}
+}
+
